@@ -1,0 +1,83 @@
+
+
+<% include ../sample.ejs %>
+
+
+
+<form action="/property/search" method="GET" class="form-horizontal" >
+<div class="form-group">
+	<label class="control-lable col-sm-2">Estate:</label>
+	<div class="col-sm-8">
+		
+		<select class="form-control" name="Property[estate]" >
+					<option value="select" selected>Select estate here</option>
+					<option value="Festival">Festival City</option>
+					<option value="Tin">Tin Ma Court</option>
+					<option value="Shatin">City One Shatin</option>
+					</select>
+	</div>
+</div>
+
+
+<div class="form-group">
+	<label class="control-lable col-sm-2">Bedroom:</label>
+	<div class="col-sm-8">
+		<input id="slider" class="form-control" name="Property[bedroom]" type="number"  required>
+	</div>
+</div>
+
+
+<div class="form-group">
+	<label class="control-lable col-sm-2">Area:</label>
+	<div class="col-sm-8">
+		<input id="slider" class="form-control" name="Property[area]" type="number" min="0" max="5000" required>
+	</div>
+</div>
+
+<div class="form-group">
+	<label class="control-lable col-sm-2">Rent:</label>
+	<div class="col-sm-8">
+		<input class="form-control" name="Property[rent]" type="number" min="0" max="20000" required>
+	</div>
+</div>
+<button class="btn btn-default col-sm-offset-2" type="submit" value="ADD">Submit</button>
+<% property.forEach( function(model) { %>
+<% var m = model.id %>
+<div class="panel panel-default col-sm-6">
+	<div class="panel-heading">
+		<h3 class="panel-title">
+			<strong><a href="/property/view/<%=m%>"><%=model.id%></a></strong>
+		</h3>
+		<div class= "panel-body">
+			<div class="col-xs-4">
+				<img src="<%=model.url%>" class="media-object" width="150px" height="150px" alt="Media Object">
+			</div>
+			<div class="col-xs-8">
+				<ul class="list-group">
+					<li class="list-group-item"><strong>Estate:</strong><%=model.estate%></li>
+					<li class="list-group-item"><strong>Area:</strong><%=model.area%> sq feet</li>
+					<li class="list-group-item"><strong>Rent:</strong><%=model.rent%></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<% }); %>
+	<% for(i=1;i<=count;i++){%>
+	<li><a href="/property/search/?page=<%=i%>"><%=i%></a></li>
+<% } %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>

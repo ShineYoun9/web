@@ -1,0 +1,159 @@
+
+	<script>
+var trackBar = document.getElementById("trackBar");
+//初始化trackBar
+trackBar.min = 1;
+trackBar.max = 100;
+trackBar.step = 1;
+trackBar.value = 1;
+            trackBar.addEventListener("change",function(){           alert(this.value);
+</script>
+
+<script>
+var trackBar1 = document.getElementById("trackBar1");
+//初始化trackBar
+trackBar1.min = 1;
+trackBar1.max = 100;
+trackBar1.step = 1;
+trackBar1.value = 1;
+            trackBar1.addEventListener("change",function(){           alert(this.value);
+</script>
+
+
+
+<% include ../sample.ejs %>
+
+<table style="margin:0px auto">
+<tr>
+<td>
+<table border="1">
+<tr>
+<td colspan="3" class="text-center">
+<h5>
+酒店式靚裝，有泳池會所
+</h5>
+</td>
+</tr>
+<tr>
+<td>
+<img src="http://orientaldaily.on.cc/cnt/finance/20111228/photo/1228-00204-028b1.jpg" alt="Bootstrap Image Preview" width="150" height="150" class="img-rounded center-block" />
+</td>
+<td width="5"></td>
+<td>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">
+Estate:<small>Festival City</small>
+</h3>
+</div>
+<div class="panel-body">
+Gross Area:<small>700 sq feet</small>
+</div>
+<div class="panel-footer">
+Rent:<small>$18000</small>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<table border="1">
+<tr>
+<td colspan="3" class="text-center">
+<h5>
+2房實用，交通方便
+</h5>
+</td>
+</tr>
+<tr>
+<td>
+<img src="http://static.apple.nextmedia.com/images/apple-photos/640pix/20030903/Article_fin/03bc351p.jpg" alt="Bootstrap Image Preview" width="150" height="150" class="img-rounded center-block" />
+</td>
+<td width="5"></td>
+<td>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">
+Estate:<small>Tin Ma Court</small>
+</h3>
+</div>
+<div class="panel-body">
+Gross Area:<small>500 sq feet</small>
+</div>
+<div class="panel-footer">
+Rent:<small>$12000</small>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="10"></td>
+<td>
+<table>
+<tr>
+
+<div >
+					<ul class="pagination">
+						<li>
+							<a href="\property\search"> << </a>
+						</li>
+						<li>
+							<a href="\property\search" id="first">1</a>
+						</li>
+						<li>
+							<a href="\property\search1" id="second">2</a>
+						</li>
+						<li>
+							<a href="\property\search1"> >> </a>
+						</li>
+					</ul>
+				</div>
+
+</tr>
+<tr>
+				
+   <p> <h3>Property Search</h3></p>
+   
+   </tr>
+   <tr>
+   
+   <form role="form">
+				<div class="form-group">
+					 
+					<label for="estate">Estate:</label>
+					<select class="form-control" name="estate" >
+					<option value="select" selected>Select estate here</option>
+					<option value="Festival">Festival City</option>
+					<option value="Tin">Tin Ma Court</option>
+					<option value="Shatin">City One Shatin</option>
+					</select>
+				</div>
+				<div class="form-group">
+					 
+					<label for="bedroom">Bedroom:</label><input class="form-control" id="bedroom" type="number" />
+				</div>
+	
+	<div class="form-group">
+					 
+					<label for="Area">Area(Sq feet):</label>			
+<input type="range" id="trackBar" min="0" max="2000" step="1" value="1" />	
+</div>
+<div class="form-group">
+					 
+					<label for="Rent">Rent(HK$):</label>			
+<input type="range" id="trackBar1" min="0" max="30000" step="1" value="1" />	
+</div>			
+<input class="btn btn-default center-block" type="button"  value="Submit" name="Submit"></input>
+			</form>
+			
+			</tr>
+			</table>
+     </td>
+     </tr>
+     </table>
+
+     
+
+     	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>

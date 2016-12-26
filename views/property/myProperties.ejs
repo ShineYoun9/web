@@ -1,0 +1,36 @@
+
+
+
+<% include ../sample.ejs %>
+
+    
+<table class="table">
+<% property.forEach( function(model) { %>
+<tr><td><%=model.estatetitle%></td><td><%=model.estate%></td><td><a href="showIntMembers/<%=model.id%>">Interested Members</a></td>
+<td><a href="/property/update/<%=model.id%>">Edit</a></td>
+<td><a onclick="deletedata(<%=model.id%>)">Delete</a></td></tr>
+<% }); %>
+</table>
+<script >
+function deletedata(id )
+{ var s = confirm("Delete？");
+	if(s == true){
+		var d = new XMLHttpRequest();
+		d.open("POST", "delete/" + id,true);
+		d.onload = function(m){
+			alert(this.responseText);
+			location.reload(true);
+		};
+		d.send();
+		}
+	else {
+		alert("cancel");
+
+	}
+}
+</script>
+
+
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>

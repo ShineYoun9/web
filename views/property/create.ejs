@@ -1,0 +1,87 @@
+
+
+
+<% include ../sample.ejs %>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+<form action="/property/create" method="POST"  class="form-horizontal">
+<table style="margin:0px auto  ">
+<tr><td colspan="2" >
+<h3>Property Create form</h3>
+</td></tr>
+<tr>
+<td>Property title:</td>
+<td><div class="col-sm-10">
+<input name="Property[estatetitle]" type="text" ></input>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>Image URL:</td>
+<td>
+<div class="col-sm-10">
+<input name="Property[url]" type="text" ></input>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>Estate:</td>
+<td>
+<div class="col-sm-10">
+<select class="form-control" name="Property[estate]"  type="text">
+					<option value="Festival City">Festival City</option>
+					<option value="Tin">Tin Ma Court</option>
+					<option value="City One">City One Shatin</option>
+					</select>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>Bedroom:</td>
+<td><div class="col-sm-10">
+<input type="text" name="Property[bedroom]" required></input>
+</div></td>
+</tr>
+
+<tr>
+<td>Gross Area:</td>
+<td><div class="col-sm-10">
+<input type="text" name="Property[area]" required></input>
+</div></td>
+</tr>
+
+<tr>
+<td>Expected Tenants:</td>
+<td><div class="col-sm-10">
+<input type="text" name="Property[tenants]" required></input>
+</div></td>
+</tr>
+
+<tr>
+<td>Rent:</td>
+<td><div class="col-sm-10"><input type="text" name="Property[rent]" required></input>
+</div></td>
+</tr>
+</div>
+</div>
+</div>
+
+<tr><td colspan="2">
+<div class="col-sm-offset-2 col-sm-10">
+<button type="submit" name="Update"  value="Submit" class="btn btn-default center-block">Submit</button>
+</div>
+</td>
+</tr>
+</table>
+</form>
+
+
+
+
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>

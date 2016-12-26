@@ -1,0 +1,79 @@
+
+
+<% include ../sample.ejs %>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+<table style="margin:0px auto  ">
+<tr><td colspan="2" >
+<h3>Property Update form</h3>
+</td></tr>
+<tr>
+
+<form action="/property/update/<%=model.id%>" method="POST" >
+<td>Property title:</td>
+<td><div class="col-sm-10">
+<input  name="Property[estatetitle]" type="text" value="<%=model.estatetitle%>" ></input>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>Image URL:</td>
+<td><div class="col-sm-10">
+<input name="Property[url]" type="text" value="<%=model.url%>" ></input>
+</div></td>
+</tr>
+
+<tr>
+<td>Estate:</td>
+<td><div class="col-sm-10">
+<select class="form-control" name="Property[estate]"  value="<%=model.estate%>" type="text">
+					<option value="Festival">Festival City</option>
+					<option value="Tin">Tin Ma Court</option>
+					<option value="Shatin">City One Shatin</option>
+					</select>
+</div></td>
+</tr>
+
+<tr>
+<td>Bedroom:</td>
+<td><div class="col-sm-10">
+<input  name="Property[bedroom]" type="text" value="<%=model.bedroom%>"></input>
+</div></td>
+</tr>
+
+<tr>
+<td>Gross Area:</td>
+<td><div class="col-sm-10">
+<input  name="Property[area]" type="text" value="<%=model.area%>" ></input>
+</div></td>
+</tr>
+
+<tr>
+<td>Expected Tenants:</td>
+<td><div class="col-sm-10">
+<input  name="Property[tenants]" type="text" value="<%=model.tenants%>" ></input>
+</div></td>
+</tr>
+
+<tr>
+<td>Rent:</td>
+<td><div class="col-sm-10"><input  name="Property[rent]" type="text" value="<%=model.rent%>"></input>
+</div></td>
+</tr>
+</div>
+</div>
+</div>
+
+<tr><td colspan="2">
+<div class="col-sm-offset-2 col-sm-10">
+<button type="submit"  value="ADD" class="btn btn-default center-block">Update</button>
+</div></td></tr>
+</table>
+</form>
+
+
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>

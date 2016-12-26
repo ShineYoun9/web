@@ -1,0 +1,18 @@
+
+
+<% include ../sample.ejs %>
+
+<table class="table">
+	<%var n=count%>
+<% for(i = 0;i<n;i++) { %>
+<%var m=id[i]%>
+<tr><td><a href="/property/clearview/<%=m%>"><%=estatetitle[i]%></a></td>
+	<td><%=estate[i]%></td><td><%=area[i]%></td>
+<td>HK<%=rent[i]%></td>
+<td><a href="/member/removeproperties/<%=m%>" class="btn btn-primary" role="button">Not interested</a></td></tr>
+<% } %>
+</table>
+
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>

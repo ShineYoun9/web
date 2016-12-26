@@ -1,0 +1,23 @@
+<% include ../sample.ejs %>
+
+<table  style="margin:0px auto" class="container-fluid">
+<tr><td>
+<h3>Please Register</h3>
+</td></tr>
+<tr><td>
+<form action="/member/register" class="form-horizontal"  method="POST">
+
+<input name="Member[username]" type="text" placeholder="username" required></input>
+
+<p><input name="Member[password]" type="password" placeholder="password" required></input></p>
+
+<button class="btn btn-default center-block" type="submit" name="register" value="register"style="background:blue;color:white ">Register</button>
+</form>
+</td></tr>
+</table>
+
+
+
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>

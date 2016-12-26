@@ -1,0 +1,56 @@
+<% include ../sample.ejs %>
+
+<table style="margin:0px auto">
+
+<tr><td colspan="3" class="text-center"> <h4><%=model.estatetitle%></h4></td></tr>
+<tr>
+<td>
+<img src="<%=model.url%>" width="250" height="250" class="img-rounded center-block" />
+</td>
+<td width="10"></td>
+<td>
+<table>
+<tr><h4>Estate:<small><%=model.estate%></small></h4></tr>
+<tr><h4>Gross Area:<small><%=model.area%></small></h4></tr>
+<tr><h4>Rent:<small><%=model.rent%></small></h4></tr>
+<tr><h4>Bedroom:<small><%=model.bedroom%></small></h4></tr>
+<tr><h4>Expected Tenants:<small><%=model.trnants%></small></h4></tr>
+<tr><h4>created:<small>Sun Oct 02 2016 10:17:49 GMT+0800(HKT)</small></h4></tr>
+<tr><h4>Updated:<small>Sun Oct 02 2016 10:17:49 GMT+0800(HKT)</small></h4></tr>
+
+
+<div class="col-sm-offset-2 col-sm-10">
+
+
+<tr><a onclick="chose('username')" class="btn btn-primary" role="button">Declared Interested</a>
+</tr>
+</dvi>
+
+</table>
+</td>
+</tr>
+
+</table>
+
+<script >
+function chose(username )
+{
+	var d = new XMLHttpRequest();
+	if(username == null){
+		
+		self.location="/member/login";
+		
+		  }
+		else
+		{
+			self.location="/member/addproperties/<%=model.id%>";
+		
+		
+		}
+	
+}
+</script>
+
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
