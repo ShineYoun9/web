@@ -1,3 +1,2 @@
-# lab7
+# web using sails framework
 
-a [Sails](http://sailsjs.org) application
